@@ -30,9 +30,6 @@ const PageContainer = styled.div`
    transform: ${props =>
       props.secondFromTop && !props.becomingTop ? 'translateX(-20%)' : null};
    overflow: ${props => (props.secondFromTop ? 'hidden' : 'auto')};
-   animation: ${props =>
-      props.exiting ? slideOutToRight : slideInFromRight} 0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
    -webkit-overflow-scrolling: touch;
 `;
 

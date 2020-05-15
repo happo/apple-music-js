@@ -17,7 +17,6 @@ const Container = styled.div`
   width: 100%;
   max-width: 400px;
   background: #fff;
-  transition: all 0.35s ease;
 
   @media screen and (max-width: 750px) {
     z-index: 0;
@@ -34,13 +33,11 @@ const CloseControls = styled.div`
   height: ${props => (props.hidden ? '0' : '48px')};
   opacity: ${props => props.hidden && '0'};
   pointer-events: ${props => props.hidden && 'none'};
-  transition: all 0.35s ease;
   cursor: pointer;
 `;
 
 const FullscreenControls = styled.div`
   opacity: ${props => props.hide && 0};
-  transition: all 0.35s ease;
   margin-top: 5vh;
 `;
 
@@ -154,12 +151,14 @@ class Controls extends Component {
           <Svg src="/images/chevron_wide.svg" />
         </CloseControls>
         <MiniControls />
-        <FullscreenControls hide={!isFullscreen}>
-          <Scrubber />
-          <TrackInfo />
-          <TrackButtons />
-          <VolumeSlider />
-        </FullscreenControls>
+        {isFullscreen && (
+          <FullscreenControls hide={!isFullscreen}>
+            <Scrubber />
+            <TrackInfo />
+            <TrackButtons />
+            <VolumeSlider />
+          </FullscreenControls>
+        )}
         {track && (
           <audio
             ref={audio => {

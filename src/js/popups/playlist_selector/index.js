@@ -17,8 +17,6 @@ const Container = styled.div`
    left: 0;
    right: 0;
    background: white;
-   animation: ${props => (props.closing ? slideOutToBottom : slideInFromBottom)}
-      0.3s ease-in-out;
 `;
 
 const Button = styled.h3`

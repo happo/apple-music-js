@@ -41,7 +41,6 @@ const Placeholder = styled.img`
    position: absolute;
    top: 0;
    max-width: 100%;
-   transition: all 0.3s;
    opacity: ${props => (props.isHidden ? 0 : 1)};
 `;
 
@@ -52,7 +51,6 @@ const Artwork = styled.img`
    max-width: 100%;
    pointer-events: none;
    user-select: none;
-   animation: {animation.fadeIn} 0.15s;
 `;
 
 const TextContainer = styled.div`

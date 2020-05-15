@@ -16,7 +16,6 @@ const Container = styled.div`
    right: 0;
    background: ${color.grayAlpha[4]};
    cursor: pointer;
-   animation: ${props => (props.isClosing ? fadeOut : fadeIn)} 0.35s ease;
 `;
 
 const mapStateToProps = state => {

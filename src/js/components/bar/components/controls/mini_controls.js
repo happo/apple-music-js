@@ -17,7 +17,6 @@ const Container = styled.div`
    border-bottom: 1px solid #E9E9E9;
    background: #F9F9F9;
    box-sizing: border-box;
-   transition: all 0.35s ease;
    cursor: pointer;
 
    ${props =>
@@ -40,7 +39,6 @@ const ArtworkContainer = styled.div`
    width: 64px;
    padding: 8px 0;
    text-align: center;
-   transition: all 0.35s ease;
 
    ${props =>
       props.isFullscreen &&
@@ -61,7 +59,6 @@ const Artwork = styled.img`
    pointer-events: none;
    user-select: none;
    border-radius: ${props => props.isFullscreen && '4px'};
-   transition: all 0.35s ease;
    box-shadow: ${props => props.isPlaying && '0 10px 30px #a5a5a5'};
 `;
 
@@ -77,7 +74,6 @@ const InfoContainer = styled.div`
    padding-left: 80px;
    opacity: ${props => props.isFullscreen && 0};
    pointer-events: ${props => props.isFullscreen && 'none'};
-   transition: all 0.35s ease;
 `;
 
 const SongTitle = styled.h3`

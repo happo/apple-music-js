@@ -28,8 +28,6 @@ const Cover = styled.div`
    right: 0;
    cursor: pointer;
    background: ${color.grayAlpha[5]};
-   animation: ${props => (props.closing ? animation.fadeOut : animation.fadeIn)}
-      0.3s ease-in-out;
 `;
 
 const MenuContainer = styled.div`
@@ -37,8 +35,6 @@ const MenuContainer = styled.div`
    width: 90%;
    max-width: 30em;
    margin-bottom: 16px;
-   animation: ${props => (props.closing ? slideOutToBottom : slideInFromBottom)}
-      0.3s ease-in-out;
    overflow: hidden;
 `;
 

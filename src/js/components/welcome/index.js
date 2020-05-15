@@ -16,7 +16,6 @@ const Container = styled.div`
    left: 0;
    right: 0;
    background: white;
-   animation: ${props => props.isClosing ? animation.fadeOut : null} 0.3s;
 `;
 
 const LogoContainer = styled.div`
@@ -26,8 +25,6 @@ const LogoContainer = styled.div`
    height: 3.5rem;
    padding-bottom: 1vh;
    overflow: hidden;
-   transition: all 0.5s;
-   animation: ${props => props.isClosing ? animation.scaleOut : animation.scale} 0.3s ease;
 
    ${breakpointSm} {
       height: 2rem;
@@ -61,7 +58,6 @@ const JsLogo = styled.img`
    position: absolute;
    width: 2.25rem;
    top: 20px;
-   animation: ${animation.scale} 0.3s ease;
 
    ${breakpointSm} {
       width: 1.5rem;
