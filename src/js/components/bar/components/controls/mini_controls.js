@@ -177,6 +177,7 @@ class MiniControls extends Component {
 
       return (
          <Container
+            data-test="mini-controls"
             isFullscreen={isFullscreen}
             onClick={() => !isFullscreen && this.props.toggleFullscreen()}>
             <ArtworkContainer isFullscreen={isFullscreen}>
@@ -193,7 +194,11 @@ class MiniControls extends Component {
                      <Svg src={`${path}/play.svg`} onClick={this.resume} />
                   )}
                   {isPlaying && (
-                     <Svg src={`${path}/pause.svg`} onClick={this.pause} />
+                    <Svg
+                      src={`${path}/pause.svg`}
+                      data-test="mini-pause"
+                      onClick={this.pause}
+                    />
                   )}
                   <Svg src={`${path}/skip_next.svg`} onClick={this.nextSong} />
                </ButtonContainer>
