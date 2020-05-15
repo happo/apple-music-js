@@ -8,6 +8,7 @@ describe('apple-music-js app', () => {
 
     cy.get('body').happoScreenshot({ component: 'Main screen' });
 
+    cy.log('**picking an album**')
     cy.contains('Artists').click();
 
     cy.contains('Coldplay');
@@ -28,6 +29,7 @@ describe('apple-music-js app', () => {
 
     cy.contains('Hymn for the Weekend').click();
 
+    cy.log('**mini player controls**')
     cy.get('[data-test="mini-pause"]').click();
 
     cy.get('[data-test="mini-controls"]').happoScreenshot({
@@ -40,6 +42,16 @@ describe('apple-music-js app', () => {
     cy.get('[data-test="controls"]').happoScreenshot({
       component: 'Controls',
     });
+
+    cy.log('**large player controls**')
+    cy.get('[data-test=play]').click()
+    cy.get('[data-test=pause]').should('be.visible')
+    cy.get('[data-test="controls"]').happoScreenshot({
+      component: 'Controls',
+      variant: 'Playing'
+    });
+    cy.get('[data-test=pause]').click()
+    cy.get('[data-test="close-controls"]').click()
 
   });
 });

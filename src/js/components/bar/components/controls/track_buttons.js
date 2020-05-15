@@ -80,10 +80,10 @@ class TrackButtons extends Component {
          <Container>
             <Svg src={`${path}/skip_back.svg`} onClick={this.prevSong} />
             {!(!!hasAudio && !!isPlaying) && (
-               <Svg src={`${path}/play.svg`} onClick={this.resume} />
+               <Svg src={`${path}/play.svg`} data-test="play" onClick={this.resume} />
             )}
             {!!isPlaying && (
-               <Svg src={`${path}/pause.svg`} onClick={this.pause} />
+               <Svg src={`${path}/pause.svg`} data-test="pause" onClick={this.pause} />
             )}
             <Svg src={`${path}/skip_next.svg`} onClick={this.nextSong} />
          </Container>
