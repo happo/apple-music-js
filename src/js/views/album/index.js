@@ -48,7 +48,7 @@ const Placeholder = styled.div`
    bottom: 0;
    left: 0;
    right: 0;
-   background: url('images/default_artwork.svg');
+   background: url('/images/default_artwork.svg');
    background-size: cover;
    transition: all 0.3s;
    opacity: ${props => (props.isHidden ? 0 : 1)};

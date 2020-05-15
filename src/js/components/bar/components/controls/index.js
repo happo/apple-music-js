@@ -146,12 +146,12 @@ class Controls extends Component {
         : null;
 
     return (
-      <Container isFullscreen={isFullscreen}>
+      <Container data-test="controls" isFullscreen={isFullscreen}>
         <CloseControls
           hidden={!isFullscreen}
           onClick={this.props.toggleFullscreen}
         >
-          <Svg src="images/chevron_wide.svg" />
+          <Svg src="/images/chevron_wide.svg" />
         </CloseControls>
         <MiniControls />
         <FullscreenControls hide={!isFullscreen}>

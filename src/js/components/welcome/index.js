@@ -108,13 +108,13 @@ export default class WelcomScreen extends Component {
          <Container isOpen={isOpen || isClosing} isClosing={isClosing}>
             <LogoContainer width={this.state.width} isClosing={isClosing}>
                <PartContainer>
-                  <AppleLogo src="images/logo_apple.svg" />
+                 <AppleLogo src="/images/logo_apple.svg" />
                </PartContainer>
                <PartContainer hidden={!this.state.showMusic}>
-                  <MusicLogo src="images/logo_music.svg" />
+                 <MusicLogo src="/images/logo_music.svg" />
                </PartContainer>
                <PartContainer hidden={!this.state.showExtension}>
-                  <JsLogo src="images/logo_js.svg" />
+                 <JsLogo src="/images/logo_js.svg" />
                </PartContainer>
             </LogoContainer>
          </Container>

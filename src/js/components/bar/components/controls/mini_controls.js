@@ -158,7 +158,7 @@ class MiniControls extends Component {
          playlist,
          currentIndex,
       } = audioState;
-      const path = 'images';
+     const path = '/images';
       const track =
          queue.length && inQueue
             ? queue[0]
@@ -173,7 +173,7 @@ class MiniControls extends Component {
                  };
       const artwork = hasAudio
          ? `https://tannerv.ddns.net/SpotiFree/${track.artwork}`
-         : `images/default_artwork.svg`;
+         : `/images/default_artwork.svg`;
 
       return (
          <Container

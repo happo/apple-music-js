@@ -129,7 +129,7 @@ class PlaylistCreator extends Component {
             />
             <Section>
                <FileInput
-                  img={'images/photo_add.png'}
+                  img={'/images/photo_add.png'}
                   onUpload={this.handleImageUpload}
                />
                <TitleInput id="playlist-title" placeholder="Playlist Name" />

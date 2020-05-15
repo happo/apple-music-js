@@ -76,7 +76,7 @@ class PlaylistSelector extends Component {
             <PlaylistButton
                key={`${key}-${playlist.title}-${playlist.description}`}
                title={playlist.title}
-               img={playlist.img || 'images/music.jpg'}
+               img={playlist.img || '/images/music.jpg'}
                chevron
                onClick={() => this.selectPlaylist(playlist)}
             />,

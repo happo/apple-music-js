@@ -86,10 +86,10 @@ class AlbumButton extends Component {
       const { loaded } = this.state;
 
       return (
-         <Container onClick={onClick}>
+         <Container data-test="album-button" onClick={onClick}>
             <ImgContainer>
                <Placeholder
-                  src="images/default_artwork.svg"
+                  src="/images/default_artwork.svg"
                   isHidden={loaded}
                />
                <LazyLoad>
