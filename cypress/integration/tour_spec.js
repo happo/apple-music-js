@@ -3,7 +3,7 @@ describe('apple-music-js app', () => {
   // a tour of app's features without any visual tests
   it('works', () => {
     cy.visit('/');
-    cy.get('[data-test="welcome-closing"]');
+    cy.get('[data-test="welcome-closing"]').should('be.visible');
     cy.get('[data-test="welcome-closing"]').should('not.be.visible');
 
     cy.log('**picking an album**')
