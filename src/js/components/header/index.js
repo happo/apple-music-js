@@ -20,7 +20,6 @@ const Container = styled.div`
    padding-left: 48px;
    background: white;
    overflow: hidden;
-   transition: all 0.3s ease-in-out;
 
    @media screen and (max-width: 768px) {
       padding-left: 0;
@@ -34,7 +33,6 @@ const ChevronContainer = styled.div`
    opacity: ${props => (props.isShown ? 1 : 0)};
    transform: ${props =>
       props.isShown ? 'scale(1) translateX(0)' : 'scale(0) translateX(20px)'};
-   transition: all 0.3s;
 
    &:active {
       svg: {
@@ -52,9 +50,6 @@ const TitleContainer = styled.div`
    margin-left: ${props =>
       props.isHidden && !props.exiting ? '-100%' : '24px'};
    margin-left: ${props => props.isTitle && props.exiting && '100vw'};
-   animation: ${props => (props.isLeaving ? slideOutToRight : slideInFromRight)}
-      0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
 
    h1 {
       color: ${props =>
@@ -81,7 +76,6 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
    margin: 0;
-   transition: all 0.3s ease-in-out;
 `;
 
 const mapStateToProps = state => {

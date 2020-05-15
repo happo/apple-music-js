@@ -17,8 +17,6 @@ const Container = styled.div`
    left: 0;
    right: 0;
    background: white;
-   animation: ${props => (props.closing ? slideOutToBottom : slideInFromBottom)}
-      0.3s ease-in-out;
 `;
 
 const Button = styled.h3`
@@ -76,7 +74,7 @@ class PlaylistSelector extends Component {
             <PlaylistButton
                key={`${key}-${playlist.title}-${playlist.description}`}
                title={playlist.title}
-               img={playlist.img || 'images/music.jpg'}
+               img={playlist.img || '/images/music.jpg'}
                chevron
                onClick={() => this.selectPlaylist(playlist)}
             />,

@@ -42,7 +42,7 @@ const OptionsButton = ({ label, icon, image, center, bold, onClick }) => {
          <TextContainer>
             <Label bold={bold}>{label}</Label>
          </TextContainer>
-         {image && <Icon src={`images/${image}`} />}
+         {image && <Icon src={`/images/${image}`} />}
       </Container>
    );
 };

@@ -61,7 +61,7 @@ class PlaylistListView extends Component {
             <PlaylistButton
                key={`${key}-${playlist.title}-${playlist.description}`}
                title={playlist.title}
-               img={playlist.img || 'images/music.jpg'}
+               img={playlist.img || '/images/music.jpg'}
                chevron
                onClick={() => this.viewPlaylist({ playlist })}
             />,
@@ -77,7 +77,7 @@ class PlaylistListView extends Component {
                <PlaylistButton
                   key="new-playlist-button"
                   title="New Playlist..."
-                  img="images/playlist_add.jpg"
+                  img="/images/playlist_add.jpg"
                   color="red"
                   onClick={this.newPlaylist}
                />

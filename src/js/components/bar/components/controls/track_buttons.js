@@ -74,7 +74,7 @@ class TrackButtons extends Component {
    render() {
       const { audioState } = this.props;
       const { hasAudio, isPlaying } = audioState;
-      const path = `images`;
+      const path = `/images`;
 
       return (
          <Container>

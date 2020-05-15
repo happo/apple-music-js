@@ -17,8 +17,6 @@ const Container = styled.div`
    left: 0;
    right: 0;
    background: white;
-   animation: ${props => (props.closing ? slideOutToBottom : slideInFromBottom)}
-      0.3s ease-in-out;
 `;
 
 const Button = styled.h3`
@@ -129,7 +127,7 @@ class PlaylistCreator extends Component {
             />
             <Section>
                <FileInput
-                  img={'images/photo_add.png'}
+                  img={'/images/photo_add.png'}
                   onUpload={this.handleImageUpload}
                />
                <TitleInput id="playlist-title" placeholder="Playlist Name" />

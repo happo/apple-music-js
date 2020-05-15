@@ -27,7 +27,6 @@ const Container = styled.div`
          background: ${props =>
             props.isChanging ? color.red[4] : color.gray[6]};
          box-shadow: none;
-         transition: all 0.05s ease;
       }
 
       .rangeslider__handle {
@@ -54,7 +53,6 @@ const Container = styled.div`
       height: 8px;
       background: #757778;
       border: 2px solid transparent;
-      transition: all 0.05s ease;
 
       ${props =>
          props.isChanging &&
@@ -79,7 +77,6 @@ const Time = styled.h5`
    margin: 8px 0;
    color: ${props => (props.isChanging ? color.red[4] : color.gray[6])};
    transform: ${props => props.shift && 'translateY(10px)'};
-   transition: all 0.15s ease;
 `;
 
 export function formatTime(seconds = 0, guide = seconds) {

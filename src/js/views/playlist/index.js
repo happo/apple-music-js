@@ -221,7 +221,7 @@ class PlaylistView extends Component {
       }
       let { tracks, img, description, title } = playlists[playlist.title];
       const { currentTrack } = apiState.data;
-      img = img || 'images/music.jpg';
+      img = img || '/images/music.jpg';
 
       return (
          <Container>
@@ -234,7 +234,7 @@ class PlaylistView extends Component {
                   <Subtitle>{description}</Subtitle>
                   <ActionContainer>
                      <Svg
-                        src="images/more_circle.svg"
+                        src="/images/more_circle.svg"
                         onClick={this.setupPlaylistOptionsMenu}
                      />
                   </ActionContainer>
@@ -252,7 +252,7 @@ class PlaylistView extends Component {
                   <Subtitle>{description}</Subtitle>
                   <ActionContainer>
                      <Svg
-                        src="images/more_circle.svg"
+                        src="/images/more_circle.svg"
                         onClick={this.setupPlaylistOptionsMenu}
                      />
                      </ActionContainer>
