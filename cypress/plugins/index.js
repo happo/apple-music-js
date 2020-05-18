@@ -15,8 +15,7 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-const happoTask = require('happo-cypress/task');
-
 module.exports = (on, config) => {
-  on('task', happoTask);
-};
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+}
