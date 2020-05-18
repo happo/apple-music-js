@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
 describe('apple-music-js app', () => {
   it('can be used to play a song', () => {
     cy.visit('/');
+
     cy.log('**loading screen**');
     cy.get('[data-test="welcome-closing"]').should('be.visible');
     cy.get('[data-test="welcome-closing"]').should('not.be.visible');
@@ -17,12 +19,10 @@ describe('apple-music-js app', () => {
     cy.get('[data-test="mini-pause"]').click();
     cy.get('[data-test="mini-controls"]').click();
 
-
     cy.log('**large player controls**')
     cy.get('[data-test=play]').click()
     cy.get('[data-test=pause]').should('be.visible')
     cy.get('[data-test=pause]').click()
     cy.get('[data-test="close-controls"]').click()
-
   });
 });
